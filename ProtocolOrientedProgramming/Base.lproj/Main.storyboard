@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ptC-Qp-2wP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Food Lala View Controller-->
+        <scene sceneID="vXk-ND-Xg5">
+            <objects>
+                <tableViewController id="ptC-Qp-2wP" customClass="FoodLalaViewController" customModule="ProtocolOrientedProgramming" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P6Q-U2-4HU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodTableViewCell" id="Ea1-8B-Cf4" customClass="FoodTableViewCell" customModule="ProtocolOrientedProgramming" customModuleProvider="target">
+                                <frame key="frameInset" minY="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ea1-8B-Cf4" id="t95-9U-ehC">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Burger" translatesAutoresizingMaskIntoConstraints="NO" id="S61-Jn-yqv">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="ypE-lI-HUr"/>
+                                                <constraint firstAttribute="width" constant="36" id="yvr-ZL-x7d"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4O-Rd-HGk">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="v4O-Rd-HGk" firstAttribute="centerY" secondItem="t95-9U-ehC" secondAttribute="centerY" id="2NF-RX-ZrL"/>
+                                        <constraint firstItem="v4O-Rd-HGk" firstAttribute="leading" secondItem="S61-Jn-yqv" secondAttribute="trailing" constant="8" id="HXU-1O-oas"/>
+                                        <constraint firstItem="S61-Jn-yqv" firstAttribute="centerY" secondItem="t95-9U-ehC" secondAttribute="centerY" id="gPm-gO-2ib"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="S61-Jn-yqv" secondAttribute="leading" id="j13-hX-zPV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="foodImageView" destination="S61-Jn-yqv" id="eaG-7I-PlY"/>
+                                    <outlet property="imageView" destination="S61-Jn-yqv" id="090-dX-3sB"/>
+                                    <outlet property="label" destination="v4O-Rd-HGk" id="t8a-Q1-z6s"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ptC-Qp-2wP" id="Tqp-No-oHW"/>
+                            <outlet property="delegate" destination="ptC-Qp-2wP" id="4Dj-L2-n48"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRO-I4-062" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208.80000000000001" y="-585.1574212893554"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,15 +71,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Burger" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-Bo-EW2" customClass="FoodImageView" customModule="ProtocolOrientedProgramming" customModuleProvider="target">
-                                <frame key="frameInset" minX="20" minY="28" width="335" height="400"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Burger" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-Bo-EW2" customClass="FoodImageView" customModule="ProtocolOrientedProgramming" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="BAw-HU-lp9"/>
                                     <constraint firstAttribute="height" constant="200" id="TEW-At-n4j"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3a-Qp-GRE" customClass="ActionButton" customModule="ProtocolOrientedProgramming" customModuleProvider="target">
-                                <frame key="frameInset" minX="166" minY="534" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3a-Qp-GRE" customClass="ActionButton" customModule="ProtocolOrientedProgramming" customModuleProvider="target">
                                 <state key="normal" title="Shake"/>
                                 <connections>
                                     <action selector="clickShakeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Zh-6U-NOx"/>
