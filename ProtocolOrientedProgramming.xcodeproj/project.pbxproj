@@ -14,6 +14,8 @@
 		AFAC057E1D4A881700AF2525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFAC057D1D4A881700AF2525 /* Assets.xcassets */; };
 		AFAC05811D4A881700AF2525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFAC057F1D4A881700AF2525 /* LaunchScreen.storyboard */; };
 		AFAC058C1D4A881700AF2525 /* ProtocolOrientedProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAC058B1D4A881700AF2525 /* ProtocolOrientedProgrammingTests.swift */; };
+		AFAC05981D4A882500AF2525 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAC05971D4A882500AF2525 /* Shakeable.swift */; };
+		AFAC05991D4A886B00AF2525 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAC05971D4A882500AF2525 /* Shakeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		AFAC05871D4A881700AF2525 /* ProtocolOrientedProgrammingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolOrientedProgrammingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAC058B1D4A881700AF2525 /* ProtocolOrientedProgrammingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolOrientedProgrammingTests.swift; sourceTree = "<group>"; };
 		AFAC058D1D4A881700AF2525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFAC05971D4A882500AF2525 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 		AFAC05721D4A881700AF2525 /* ProtocolOrientedProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				AFAC05961D4A881D00AF2525 /* Shake */,
 				AFAC05731D4A881700AF2525 /* AppDelegate.swift */,
 				AFAC05751D4A881700AF2525 /* ViewController.swift */,
 				AFAC05771D4A881700AF2525 /* Main.storyboard */,
@@ -97,6 +101,14 @@
 				AFAC058D1D4A881700AF2525 /* Info.plist */,
 			);
 			path = ProtocolOrientedProgrammingTests;
+			sourceTree = "<group>";
+		};
+		AFAC05961D4A881D00AF2525 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				AFAC05971D4A882500AF2525 /* Shakeable.swift */,
+			);
+			name = Shake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +220,7 @@
 			files = (
 				AFAC057C1D4A881700AF2525 /* ProtocolOrientedProgramming.xcdatamodeld in Sources */,
 				AFAC05761D4A881700AF2525 /* ViewController.swift in Sources */,
+				AFAC05981D4A882500AF2525 /* Shakeable.swift in Sources */,
 				AFAC05741D4A881700AF2525 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAC05991D4A886B00AF2525 /* Shakeable.swift in Sources */,
 				AFAC058C1D4A881700AF2525 /* ProtocolOrientedProgrammingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
